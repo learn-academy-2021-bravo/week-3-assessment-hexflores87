@@ -56,6 +56,7 @@
               <Card
                 drawCard={ this.drawCard }
                 shuffle={ this.shuffle }
+                hand = {this.state.hand} // added hand = this.state because its trying to map over an array 
               />
             </>
           )
@@ -80,10 +81,10 @@
           }
           return(
             <>
-              <button onClick={ }>
+              <button onClick={this.props.drawCard }> // referencing the object by adding this.props(properties)
                 Click to Draw a Card
               </button>
-              <button onClick={ shuffle }>
+              <button onClick={this.props.shuffle }>// // referencing the object by adding this.props(properties)
                 Return Cards and Shuffle Deck
               </button>
               <div style={ handStyles }>
